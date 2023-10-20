@@ -1,5 +1,4 @@
-
-name: Generate Docs
+name: Generate recipe pages
 
 on:
   push:
@@ -13,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
       - name: Checkout Repository
         uses: actions/checkout@v4
-      # Set up Python (or any other required setup depending on your generate.py script)
+    steps:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -23,7 +22,7 @@ jobs:
       - name: Commit and push if changed
         run: |
           git config user.name "GitHub Actions Bot"
-          git config user.email "nacitar.sevaht@gmail.com" # replace with your email or a dedicated bot email
+          git config user.email "nacitar.sevaht@gmail.com"
           git add docs/
           git diff-index --quiet HEAD || git commit -m "Update generated pages via GitHub Actions"
           git push
