@@ -1,5 +1,5 @@
 from datetime import timedelta
-from generator import Recipe
+from recipe import Recipe
 
 recipe = Recipe(
     title="Family-Favorite Chili with Hidden Veggies",
