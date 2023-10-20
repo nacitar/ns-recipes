@@ -1,4 +1,4 @@
-name: Generate recipe pages
+name: Generate and commit recipe pages
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate-and-commit:
-    name: Generate and commit
+  generate-and-commit-recipe-pages:
+    name: Generate and commit recipe pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -18,11 +18,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - name: Generate documentation
+      - name: Generate recipe pages
         run: python ./generate.py
       - name: Commit and push if changed
         run: |
-          git config user.name "GitHub Actions Bot"
+          git config user.name "Jacob McIntosh"
           git config user.email "nacitar.sevaht@gmail.com"
           git add docs/
           git diff-index --quiet HEAD || git commit -m "Update generated pages via GitHub Actions"
