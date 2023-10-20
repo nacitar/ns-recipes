@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        .recipe-container {
+            border: 1px solid #ccc;
+            padding: 1rem;
+        }
+
+        .recipe-header {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .sub-title {
+            color: gray;
+        }
+
+        .timing {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .instructions, .ingredients {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            list-style-position: inside;
+            padding-left: 2em;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    <div class="recipe-header">
+        <div class="title">${title}</div>
+        <div class="sub-title">${subtitle}</div>
+        <div class="timing">
+            <div>
+                PREP TIME <br> ${prep_time}
+            </div>
+            <div>
+                COOK TIME <br> ${cook_time}
+            </div>
+            <div>
+                TOTAL TIME <br> ${total_time}
+            </div>
+        </div>
+    </div>
+
+    <div class="ingredients">
+        <strong>Ingredients</strong>
+        <ul>
+<!-- start ingredients list -->
+${ingredients}
+<!-- end ingredients list -->
+        </ul>
+    </div>
+
+    <div class="instructions">
+        <strong>Instructions</strong>
+        <ol>
+<!-- start instructions list -->
+${instructions}
+<!-- end instructions list -->
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
+
