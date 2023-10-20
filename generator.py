@@ -51,11 +51,12 @@ def main():
     recipes = load_recipes_from_folder("recipes")
     
     # Creating an index page with links to each recipe
-    with open("docs/index.html", "w") as index:
+    output_dir = "docs"
+    with open(f"{output_dir}/index.html", "w") as index:
         index.write("<h1>Recipes Index</h1>\n<ul>\n")
         for module_name, recipe in recipes.items():
-            filename = f"docs/{module_name}.html"
-            with open(filename, "w") as f:
+            filename = f"{module_name}.html"
+            with open(f"{output_dir}/{filename}", "w") as f:
                 f.write(render_to_html(recipe))
             index.write(f"<li><a href='{filename}'>{recipe.title}</a></li>\n")
         index.write("</ul>")
