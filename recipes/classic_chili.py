@@ -17,7 +17,7 @@ recipe = Recipe(
         "2 tablespoons ground cumin",
         "1 tablespoon onion powder",
         "1 tablespoon garlic powder",
-        "1 1/2 teaspoons salt (optional)",
+        "1 teaspoon salt",
         "1/2 teaspoon ground black pepper",
         "1/2 teaspoon ground cayenne pepper",
     ],
