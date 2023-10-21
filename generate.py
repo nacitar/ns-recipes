@@ -6,15 +6,7 @@ from pathlib import Path
 from dataclasses import dataclass
 from datetime import timedelta
 from string import Template
-
-@dataclass
-class Recipe:
-    title: str
-    subtitle: str
-    prep_time: timedelta
-    cook_time: timedelta
-    ingredients: list[str]
-    instructions: list[str]
+from common import Recipe
 
 def render_to_html(recipe: Recipe) -> str:
     with open("template.html", "r") as f:
