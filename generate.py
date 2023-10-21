@@ -33,7 +33,6 @@ def load_recipes_from_folder(folder: str) -> Dict[str, Recipe]:
         spec = importlib.util.spec_from_file_location(module_name, file)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
-
         # Assuming the recipe is stored in a variable named "recipe" in each .py file
         recipes[module_name] = module.recipe
 
@@ -41,8 +40,6 @@ def load_recipes_from_folder(folder: str) -> Dict[str, Recipe]:
 
 def main():
     recipes = load_recipes_from_folder("recipes")
-    
-    # Creating an index page with links to each recipe
     output_dir = "docs"
     with open(f"{output_dir}/index.html", "w") as index:
         index.write("<h1>Recipes Index</h1>\n<ul>\n")
