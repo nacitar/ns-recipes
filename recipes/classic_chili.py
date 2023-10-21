@@ -20,7 +20,7 @@ recipe = Recipe(
         "1 teaspoon salt",
         "1/2 teaspoon ground black pepper",
         "1/2 teaspoon ground cayenne pepper",
-        "(on the side) El Yucateco XXXtra Hot Sauce Chile Habanero"
+        "(on the side) El Yucateco XXXtra Hot Sauce (Habanero)"
     ],
     instructions=[
         "Brown the ground beef in a skillet. Drain fat and return to skillet.",
