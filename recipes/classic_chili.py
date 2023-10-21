@@ -22,8 +22,9 @@ recipe = Recipe(
         "1/2 teaspoon ground cayenne pepper",
     ],
     instructions=[
-        "Brown the ground beef in a skillet.  Drain fat and return to skillet.",
-        "Add all of the ingredients to the skillet.  Stir until well combined.",
-        "Bring to a low boil, reduce the heat, and simmer uncovered for 25 minutes, stirring occasionally."
+        "Brown the ground beef in a skillet. Drain fat and return to skillet.",
+        "Add all of the ingredients to the skillet. Stir until well combined.",
+        "Bring to a low boil, reduce the heat, and simmer uncovered for 25 minutes, stirring occasionally.",
+        "Remove from heat. Let rest for 5-10 minutes before serving.",
     ]
 )
