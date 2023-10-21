@@ -5,7 +5,7 @@ recipe = Recipe(
     title="Classic Chili",
     subtitle="A simple, easy-to-make chili.",
     prep_time=timedelta(minutes=10),
-    cook_time=timedelta(minutes=25),
+    cook_time=timedelta(minutes=30),
     ingredients=[
         "1 pound ground beef",
         "1 (8 once) can tomato sauce",
