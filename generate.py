@@ -8,15 +8,32 @@ from datetime import timedelta
 from string import Template
 from common import Recipe
 
+from datetime import timedelta
+
+def timedelta_to_str(td: timedelta) -> str:
+    days, remainder = divmod(td.total_seconds(), 86400)
+    hours, remainder = divmod(remainder, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    result = []
+    if days:
+        result.append(f"{int(days)} day{'s' if days != 1 else ''}")
+    if hours:
+        result.append(f"{int(hours)} hour{'s' if hours != 1 else ''}")
+    if minutes:
+        result.append(f"{int(minutes)} min{'s' if minutes != 1 else ''}")
+    if not days and not hours and not minutes:
+        result.append(f"{int(seconds)} sec{'s' if seconds != 1 else ''}")
+    return " ".join(result)
+
 def render_to_html(recipe: Recipe) -> str:
     with open("template.html", "r") as f:
         template = Template(f.read())
     return template.substitute(
         title=recipe.title,
         subtitle=recipe.subtitle,
-        prep_time=str(recipe.prep_time),
-        cook_time=str(recipe.cook_time),
-        total_time=str(recipe.prep_time + recipe.cook_time),
+        prep_time=timedelta_to_str(recipe.prep_time),
+        cook_time=timedelta_to_str(recipe.cook_time),
+        total_time=timedelta_to_str(recipe.prep_time + recipe.cook_time),
         ingredients='\n'.join([f"<li>{item}</li>" for item in recipe.ingredients]),
         instructions='\n'.join([f"<li>{item}</li>" for item in recipe.instructions])
     )
