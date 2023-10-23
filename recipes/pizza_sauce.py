@@ -21,6 +21,7 @@ recipe = Recipe(
         "1/4 teaspoon white pepper",
     ],
     instructions=[
+        "In a sauce pan, combine all ingredients.  Mix well.",
         "Bring to a low boil, reduce to medium heat, and simmer covered for 15 minutes, stirring occasionally.",
         "Remove from heat. Let rest for 10 minutes before serving.",
     ]

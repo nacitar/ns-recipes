@@ -11,7 +11,7 @@ recipe = Recipe(
         "1 (8 once) can tomato sauce",
         "1 (6 ounce) can tomato paste",
         "1 (14.5 ounce) can petite diced tomatoes (with their juice)",
-        "2 (16 ounce) cans red kidney beans (drained and rinsed)",
+        "2 (16 ounce) cans dark red kidney beans (drained and rinsed)",
         "1 1/2 cups beef broth (or substitute water)",
         "2 1/2 tablespoons chili powder",
         "2 tablespoons ground cumin",
