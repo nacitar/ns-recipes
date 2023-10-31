@@ -23,7 +23,7 @@ recipe = Recipe(
         "With the serrated edge of a butter knife, gently cut out rectangular pieces from the dough. These will be used for the calzones.",
         "Spray a pan with non-stick cooking spray and transfer the dough rectangles onto it.",
         "On <b><u>just under half</u></b> of each rectangle, layer your ingredients. Start with cheese, add your toppings, and finish with another layer of cheese to bind everything.",
-        "Fold the dough over to encase the toppings. Press the edged together, trimming any excess dough. Use these scraps to patch any thin spots or holes.",
+        "Fold the dough over to encase the toppings. Press the edges together, trimming any excess dough. Use these scraps to patch any thin spots or holes.",
         "Bake in a preheated oven at 400°F for 25 minutes.",
         "Remove from oven, slice into preferred portions, and serve with pizza sauce.",
     ]
