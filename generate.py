@@ -64,7 +64,7 @@ def main():
             filename = f"{module_name}.html"
             with open(f"{output_dir}/{filename}", "w") as f:
                 f.write(render_to_html(recipe))
-            index.write(f"<li><a href='{filename}'>{recipe.title}</a></li>\n")
+            index.write(f'<li><a href="{filename}">{recipe.title}</a></li>\n')
         index.write("</ul>")
 
 if __name__ == "__main__":
