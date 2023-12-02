@@ -2,9 +2,8 @@ name: Generate and commit recipe pages
 
 on:
   push:
-    paths:
-      - '**'
-      - '!docs/**'
+    paths-ignore:
+      - 'docs/**'
   workflow_dispatch:
 
 jobs:
